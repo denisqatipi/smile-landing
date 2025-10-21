@@ -7,24 +7,24 @@ const Footer = () => {
 
     const quickLinks = [
         { label: 'Home', href: '#home' },
-        { label: 'Why Albania', href: '#why-albania' },
-        { label: 'Our Clinic', href: '#clinic' },
-        { label: 'Meet Our Doctors', href: '#doctors' },
-        { label: 'Treatments', href: '#treatments' },
-        { label: 'Patient Journey', href: '#journey' },
-        { label: 'Gallery', href: '#gallery' },
-        { label: 'Destination', href: '#destination' },
+        { label: "Perché l'Albania", href: '#why-albania' },
+        { label: 'La Nostra Clinica', href: '#clinic' },
+        { label: 'Incontra i Nostri Dottori', href: '#doctors' },
+        { label: 'Trattamenti', href: '#treatments' },
+        { label: 'Percorso del Paziente', href: '#journey' },
+        { label: 'Galleria', href: '#gallery' },
+        { label: 'Destinazione', href: '#destination' },
         { label: 'FAQ', href: '#faq' },
-        { label: 'Contact', href: '#contact' }
+        { label: 'Contatti', href: '#contact' }
     ];
 
     const treatments = [
-        'Dental Implants',
-        'Porcelain Veneers',
-        'Teeth Whitening',
-        'Crowns & Bridges',
-        'Full Mouth Restoration',
-        'Orthodontics'
+        'Impianti Dentali',
+        'Faccette in Porcellana',
+        'Sbiancamento Dentale',
+        'Corone e Ponti',
+        'Riabilitazione Completa del Cavo Orale',
+        'Ortodonzia'
     ];
 
     const handleScroll = (href: string) => {
@@ -42,38 +42,37 @@ const Footer = () => {
                     <div>
                         <div className='mb-6'>
                             <h3 className='text-2xl font-bold'>
-                                Smile<span className='text-primary-400'>Dental</span>
+                                Smile<span className='text-primary-400'>Provider</span>
                             </h3>
-                            <p className='text-sm text-navy-300'>Albania</p>
                         </div>
                         <p className='mb-6 text-sm text-navy-200'>
-                            Premium dental care in the heart of Albania. Transform your smile at half the price with
-                            European standards.
+                            Cure dentali premium nel cuore dell'Albania. Trasforma il tuo sorriso a metà prezzo con
+                            standard europei.
                         </p>
 
                         {/* Address */}
                         <div className='mb-4 flex items-start'>
                             <MapPin className='mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary-400' />
                             <div className='text-sm text-navy-200'>
-                                <p>Rruga e Durresit</p>
-                                <p>Tirana 1001, Albania</p>
+                                <p>Rruga Martin Camaj 113</p>
+                                <p>Tirane, Albania</p>
                             </div>
                         </div>
 
                         {/* Google Maps Link */}
                         <a
-                            href='https://maps.google.com/?q=Tirana+Albania'
+                            href='https://maps.google.com/?q=Rruga+Martin+Camaj+113+Tirane'
                             target='_blank'
                             rel='noopener noreferrer'
                             className='inline-block text-sm font-medium text-primary-400 hover:text-primary-300'
                         >
-                            View on Google Maps →
+                            Visualizza su Google Maps →
                         </a>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className='mb-6 text-lg font-bold'>Quick Links</h4>
+                        <h4 className='mb-6 text-lg font-bold'>Link Rapidi</h4>
                         <ul className='space-y-3'>
                             {quickLinks.map((link) => (
                                 <li key={link.href}>
@@ -94,7 +93,7 @@ const Footer = () => {
 
                     {/* Treatments */}
                     <div>
-                        <h4 className='mb-6 text-lg font-bold'>Treatments</h4>
+                        <h4 className='mb-6 text-lg font-bold'>Trattamenti</h4>
                         <ul className='space-y-3'>
                             {treatments.map((treatment) => (
                                 <li key={treatment}>
@@ -115,41 +114,41 @@ const Footer = () => {
 
                     {/* Contact */}
                     <div>
-                        <h4 className='mb-6 text-lg font-bold'>Get in Touch</h4>
+                        <h4 className='mb-6 text-lg font-bold'>Mettiti in Contatto</h4>
                         <div className='space-y-4'>
                             <a
-                                href='tel:+355691234567'
+                                href='tel:+355698082222'
                                 className='flex items-center text-sm text-navy-200 transition-colors hover:text-primary-400'
                             >
                                 <Phone className='mr-3 h-5 w-5 text-primary-400' />
-                                +355 69 123 4567
+                                +355 69 808 2222
                             </a>
 
                             <a
-                                href='https://wa.me/355691234567'
+                                href='https://wa.me/355698082222'
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='flex items-center text-sm text-navy-200 transition-colors hover:text-primary-400'
                             >
                                 <MessageSquare className='mr-3 h-5 w-5 text-primary-400' />
-                                WhatsApp Chat
+                                Chat WhatsApp
                             </a>
 
                             <a
-                                href='mailto:info@smiledentalalba.com'
+                                href='mailto:infosmileprovider@gmail.com'
                                 className='flex items-center text-sm text-navy-200 transition-colors hover:text-primary-400'
                             >
                                 <Mail className='mr-3 h-5 w-5 text-primary-400' />
-                                info@smiledentalalba.com
+                                infosmileprovider@gmail.com
                             </a>
                         </div>
 
                         {/* Social Media */}
                         <div className='mt-8'>
-                            <h5 className='mb-4 text-sm font-semibold'>Follow Us</h5>
+                            <h5 className='mb-4 text-sm font-semibold'>Seguici</h5>
                             <div className='flex gap-4'>
                                 <a
-                                    href='https://facebook.com/smiledentalalba'
+                                    href='https://www.facebook.com/smileproviderdentistiinalbania/'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     className='flex h-10 w-10 items-center justify-center rounded-full bg-navy-700 transition-colors hover:bg-primary-600'
@@ -158,7 +157,7 @@ const Footer = () => {
                                     <Facebook className='h-5 w-5' />
                                 </a>
                                 <a
-                                    href='https://instagram.com/smiledentalalba'
+                                    href='https://www.instagram.com/smile_provider_dental_clinic/'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     className='flex h-10 w-10 items-center justify-center rounded-full bg-navy-700 transition-colors hover:bg-primary-600'
@@ -167,7 +166,7 @@ const Footer = () => {
                                     <Instagram className='h-5 w-5' />
                                 </a>
                                 <a
-                                    href='https://wa.me/355691234567'
+                                    href='https://wa.me/355698082222'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     className='flex h-10 w-10 items-center justify-center rounded-full bg-navy-700 transition-colors hover:bg-primary-600'
@@ -184,17 +183,17 @@ const Footer = () => {
                 <div className='mt-16 border-t border-navy-700 pt-8'>
                     <div className='flex flex-col items-center justify-between gap-4 md:flex-row'>
                         <p className='text-sm text-navy-300'>
-                            © {currentYear} Smile Dental Albania. All rights reserved.
+                            © {currentYear} SmileProvider. Tutti i diritti riservati.
                         </p>
                         <div className='flex gap-6 text-sm'>
                             <a href='#' className='text-navy-300 transition-colors hover:text-primary-400'>
-                                Privacy Policy
+                                Informativa sulla Privacy
                             </a>
                             <a href='#' className='text-navy-300 transition-colors hover:text-primary-400'>
-                                Terms of Service
+                                Termini di Servizio
                             </a>
                             <a href='#' className='text-navy-300 transition-colors hover:text-primary-400'>
-                                Cookie Policy
+                                Politica sui Cookie
                             </a>
                         </div>
                     </div>

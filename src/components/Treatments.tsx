@@ -9,98 +9,98 @@ const Treatments = () => {
     const treatments = [
         {
             icon: Stethoscope,
-            title: 'Dental Implants',
-            price: 'from €600',
-            description: 'Permanent tooth replacement solution',
-            duration: '3-6 months',
-            recovery: '1-2 weeks',
-            warranty: '10 years',
+            title: 'Impianti Dentali',
+            price: 'da €600',
+            description: 'Soluzione permanente per la sostituzione dei denti',
+            duration: '3-6 mesi',
+            recovery: '1-2 settimane',
+            warranty: '10 anni',
             details: [
-                'High-quality titanium implants from leading European manufacturers',
-                'Includes surgical placement, healing abutment, and crown',
-                'Computer-guided surgery for precision and safety',
-                'Bone grafting available if needed',
-                'Final restoration with premium ceramic crowns'
+                'Impianti in titanio di alta qualità da produttori europei leader',
+                'Include posizionamento chirurgico, abutment di guarigione e corona',
+                'Chirurgia guidata dal computer per precisione e sicurezza',
+                'Innesto osseo disponibile se necessario',
+                'Restauro finale con corone in ceramica premium'
             ]
         },
         {
             icon: Sparkles,
-            title: 'Porcelain Veneers',
-            price: 'from €250',
-            description: 'Transform your smile instantly',
-            duration: '5-7 days',
-            recovery: 'Immediate',
-            warranty: '5 years',
+            title: 'Faccette in Porcellana',
+            price: 'da €250',
+            description: 'Trasforma il tuo sorriso istantaneamente',
+            duration: '5-7 giorni',
+            recovery: 'Immediato',
+            warranty: '5 anni',
             details: [
-                'Ultra-thin, natural-looking porcelain shells',
-                'Digital smile design preview before treatment',
-                'Minimal tooth preparation required',
-                'Custom-crafted in our on-site laboratory',
-                'Color-matched to your natural teeth for seamless results'
+                'Gusci in porcellana ultra-sottili dall\'aspetto naturale',
+                'Anteprima del design digitale del sorriso prima del trattamento',
+                'Preparazione minima del dente richiesta',
+                'Realizzate su misura nel nostro laboratorio interno',
+                'Abbinate al colore dei tuoi denti naturali per risultati impeccabili'
             ]
         },
         {
             icon: Zap,
-            title: 'Professional Teeth Whitening',
-            price: 'from €150',
-            description: 'Brighten your smile safely',
-            duration: '1 hour',
-            recovery: 'Immediate',
-            warranty: 'N/A',
+            title: 'Sbiancamento Dentale Professionale',
+            price: 'da €150',
+            description: 'Illumina il tuo sorriso in sicurezza',
+            duration: '1 ora',
+            recovery: 'Immediato',
+            warranty: 'N/D',
             details: [
-                'Professional-grade whitening gel (35% hydrogen peroxide)',
-                'LED light activation for enhanced results',
-                'Up to 8 shades lighter in one session',
-                'Take-home kit included for maintenance',
-                'Safe for enamel with minimal sensitivity'
+                'Gel sbiancante di livello professionale (perossido di idrogeno al 35%)',
+                'Attivazione con luce LED per risultati migliori',
+                'Fino a 8 tonalità più chiare in una sessione',
+                'Kit da portare a casa incluso per il mantenimento',
+                'Sicuro per lo smalto con sensibilità minima'
             ]
         },
         {
             icon: Smile,
-            title: 'Orthodontics',
-            price: 'from €1,200',
-            description: 'Straighten teeth with braces or aligners',
-            duration: '12-24 months',
-            recovery: 'N/A',
-            warranty: 'Treatment included',
+            title: 'Ortodonzia',
+            price: 'da €1.200',
+            description: 'Raddrizza i denti con apparecchi o allineatori',
+            duration: '12-24 mesi',
+            recovery: 'N/D',
+            warranty: 'Trattamento incluso',
             details: [
-                'Traditional metal braces or clear ceramic options',
-                'Invisible aligners (similar to Invisalign)',
-                '3D treatment simulation and progress tracking',
-                'Monthly check-ups during your stay or remotely',
-                'Retainers included to maintain results'
+                'Apparecchi metallici tradizionali o opzioni in ceramica trasparente',
+                'Allineatori invisibili (simili a Invisalign)',
+                'Simulazione del trattamento 3D e monitoraggio dei progressi',
+                'Controlli mensili durante il soggiorno o da remoto',
+                'Contenitori inclusi per mantenere i risultati'
             ]
         },
         {
             icon: CheckCircle2,
-            title: 'Full Mouth Restoration',
-            price: 'from €6,500',
-            description: 'Complete smile transformation',
-            duration: '7-14 days',
-            recovery: '2-3 weeks',
-            warranty: '10 years',
+            title: 'Riabilitazione Completa del Cavo Orale',
+            price: 'da €6.500',
+            description: 'Trasformazione completa del sorriso',
+            duration: '7-14 giorni',
+            recovery: '2-3 settimane',
+            warranty: '10 anni',
             details: [
-                'Comprehensive treatment plan tailored to your needs',
-                'Combination of implants, crowns, bridges, and veneers',
-                'All-on-4 or All-on-6 implant solutions available',
-                'Temporary teeth provided during healing',
-                'Complete functional and aesthetic restoration'
+                'Piano di trattamento completo su misura per le tue esigenze',
+                'Combinazione di impianti, corone, ponti e faccette',
+                'Soluzioni implantari All-on-4 o All-on-6 disponibili',
+                'Denti temporanei forniti durante la guarigione',
+                'Restauro funzionale ed estetico completo'
             ]
         },
         {
             icon: Crown,
-            title: 'Crowns & Bridges',
-            price: 'from €300',
-            description: 'Restore damaged or missing teeth',
-            duration: '3-5 days',
-            recovery: 'Immediate',
-            warranty: '5 years',
+            title: 'Corone e Ponti',
+            price: 'da €300',
+            description: 'Ripristina i denti danneggiati o mancanti',
+            duration: '3-5 giorni',
+            recovery: 'Immediato',
+            warranty: '5 anni',
             details: [
-                'Premium ceramic (zirconia or e.max) materials',
-                'Natural appearance that blends with existing teeth',
-                'Precise digital impressions for perfect fit',
-                'No metal showing through - completely aesthetic',
-                'Durable and long-lasting restorations'
+                'Materiali in ceramica premium (zirconia o e.max)',
+                'Aspetto naturale che si fonde con i denti esistenti',
+                'Impronte digitali precise per una vestibilità perfetta',
+                'Nessun metallo visibile - completamente estetico',
+                'Restauri durevoli e duraturi'
             ]
         }
     ];
@@ -115,10 +115,10 @@ const Treatments = () => {
                 {/* Section Header */}
                 <div className='mb-16 text-center'>
                     <h2 className='mb-4 text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl'>
-                        Popular <span className='text-primary-600'>Treatments</span>
+                        <span className='text-primary-600'>Trattamenti</span> Popolari
                     </h2>
                     <p className='mx-auto max-w-2xl text-lg text-gray-600'>
-                        Comprehensive dental care with transparent pricing and guaranteed quality
+                        Cure dentali complete con prezzi trasparenti e qualità garantita
                     </p>
                 </div>
 
@@ -146,15 +146,15 @@ const Treatments = () => {
                                 {/* Treatment Info */}
                                 <div className='mb-4 space-y-2 rounded-xl bg-gray-50 p-4 text-sm'>
                                     <div className='flex justify-between'>
-                                        <span className='text-gray-600'>Duration:</span>
+                                        <span className='text-gray-600'>Durata:</span>
                                         <span className='font-medium text-gray-900'>{treatment.duration}</span>
                                     </div>
                                     <div className='flex justify-between'>
-                                        <span className='text-gray-600'>Recovery:</span>
+                                        <span className='text-gray-600'>Recupero:</span>
                                         <span className='font-medium text-gray-900'>{treatment.recovery}</span>
                                     </div>
                                     <div className='flex justify-between'>
-                                        <span className='text-gray-600'>Warranty:</span>
+                                        <span className='text-gray-600'>Garanzia:</span>
                                         <span className='font-medium text-gray-900'>{treatment.warranty}</span>
                                     </div>
                                 </div>
@@ -164,7 +164,7 @@ const Treatments = () => {
                                     onClick={() => toggleDetails(index)}
                                     className='flex w-full items-center justify-between rounded-lg border border-primary-600 px-4 py-2.5 text-sm font-semibold text-primary-600 transition-all hover:bg-primary-50'
                                 >
-                                    <span>Learn More</span>
+                                    <span>Scopri di Più</span>
                                     <ChevronDown
                                         className={`h-5 w-5 transition-transform ${expandedTreatment === index ? 'rotate-180' : ''}`}
                                     />
@@ -173,7 +173,7 @@ const Treatments = () => {
                                 {/* Expanded Details */}
                                 {expandedTreatment === index && (
                                     <div className='mt-4 space-y-3 rounded-xl bg-primary-50 p-4'>
-                                        <p className='text-sm font-semibold text-primary-900'>What's included:</p>
+                                        <p className='text-sm font-semibold text-primary-900'>Cosa è incluso:</p>
                                         <ul className='space-y-2'>
                                             {treatment.details.map((detail, detailIndex) => (
                                                 <li key={detailIndex} className='flex items-start text-sm text-gray-700'>
@@ -192,7 +192,7 @@ const Treatments = () => {
                 {/* CTA */}
                 <div className='mt-16 text-center'>
                     <p className='mb-6 text-lg text-gray-600'>
-                        Not sure which treatment is right for you?
+                        Non sei sicuro di quale trattamento sia giusto per te?
                     </p>
                     <button
                         onClick={() => {
@@ -201,7 +201,7 @@ const Treatments = () => {
                         }}
                         className='rounded-lg bg-primary-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:bg-primary-700 hover:shadow-xl'
                     >
-                        Get Free Consultation & Treatment Plan
+                        Richiedi Consulenza Gratuita e Piano di Trattamento
                     </button>
                 </div>
             </div>

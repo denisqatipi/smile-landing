@@ -2,25 +2,59 @@
 
 import { Play, Quote, Star } from 'lucide-react';
 import { useState } from 'react';
+import {
+    ReactCompareSlider,
+    ReactCompareSliderImage
+} from 'react-compare-slider';
 
 const Gallery = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
 
     const categories = [
-        { id: 'all', label: 'All Results' },
-        { id: 'implants', label: 'Implants' },
-        { id: 'veneers', label: 'Veneers' },
-        { id: 'whitening', label: 'Whitening' },
-        { id: 'restoration', label: 'Full Restoration' }
+        { id: 'all', label: 'Tutti i Risultati' },
+        { id: 'implants', label: 'Impianti' },
+        { id: 'veneers', label: 'Faccette' },
+        { id: 'whitening', label: 'Sbiancamento' },
+        { id: 'restoration', label: 'Riabilitazione Completa' }
     ];
 
     const galleryItems = [
-        { category: 'veneers', title: 'Porcelain Veneers Transformation' },
-        { category: 'implants', title: 'Single Tooth Implant' },
-        { category: 'whitening', title: 'Professional Whitening' },
-        { category: 'restoration', title: 'Full Mouth Makeover' },
-        { category: 'veneers', title: 'Smile Design with Veneers' },
-        { category: 'implants', title: 'Multiple Implants' }
+        {
+            category: 'veneers',
+            title: 'Trasformazione con Faccette in Porcellana',
+            before: '/images/before-after/1-before.jpg',
+            after: '/images/before-after/1-after.jpg'
+        },
+        {
+            category: 'implants',
+            title: 'Impianto Singolo',
+            before: '/images/before-after/2-before.jpg',
+            after: '/images/before-after/2-after.jpg'
+        },
+        {
+            category: 'whitening',
+            title: 'Sbiancamento Professionale',
+            before: '/images/before-after/3-before.jpg',
+            after: '/images/before-after/3-after.jpg'
+        },
+        {
+            category: 'restoration',
+            title: 'Trasformazione Completa del Sorriso',
+            before: '/images/before-after/4-before.jpg',
+            after: '/images/before-after/4-after.jpg'
+        },
+        {
+            category: 'veneers',
+            title: 'Design del Sorriso con Faccette',
+            before: '/images/before-after/5-before.jpg',
+            after: '/images/before-after/5-after.jpg'
+        },
+        {
+            category: 'implants',
+            title: 'Impianti Multipli',
+            before: '/images/before-after/6-before.jpg',
+            after: '/images/before-after/6-after.jpg'
+        }
     ];
 
     const testimonials = [
@@ -29,32 +63,32 @@ const Gallery = () => {
             country: 'United Kingdom',
             countryCode: 'GB',
             rating: 5,
-            treatment: 'Dental Implants',
-            text: 'I was hesitant at first, but the entire experience exceeded my expectations. The clinic is modern, the staff is professional, and Dr. Krasniqi is simply amazing. I saved over £8,000 and got to enjoy a beach holiday!'
+            treatment: 'Impianti Dentali',
+            text: 'Ero titubante all\'inizio, ma l\'intera esperienza ha superato le mie aspettative. La clinica è moderna, il personale è professionale e il Dr. Krasniqi è semplicemente fantastico. Ho risparmiato oltre £8.000 e ho potuto godere di una vacanza al mare!'
         },
         {
             name: 'Michael Weber',
             country: 'Germany',
             countryCode: 'DE',
             rating: 5,
-            treatment: 'Porcelain Veneers',
-            text: 'Outstanding service from start to finish. The digital smile design showed me exactly what to expect. My veneers look incredibly natural - nobody can tell they are not my real teeth. Highly recommend!'
+            treatment: 'Faccette in Porcellana',
+            text: 'Servizio eccezionale dall\'inizio alla fine. Il design digitale del sorriso mi ha mostrato esattamente cosa aspettarmi. Le mie faccette hanno un aspetto incredibilmente naturale - nessuno può dire che non siano i miei denti veri. Altamente raccomandato!'
         },
         {
             name: 'Laura Rossi',
             country: 'Italy',
             countryCode: 'IT',
             rating: 5,
-            treatment: 'Full Mouth Restoration',
-            text: 'After years of dental problems, I finally have a smile I am proud of. The team was patient, explained everything clearly in Italian, and the results are life-changing. Worth every penny and the trip!'
+            treatment: 'Riabilitazione Completa del Cavo Orale',
+            text: 'Dopo anni di problemi dentali, finalmente ho un sorriso di cui sono orgogliosa. Il team è stato paziente, ha spiegato tutto chiaramente in italiano e i risultati sono rivoluzionari. Vale ogni centesimo e il viaggio!'
         },
         {
             name: 'James O\'Connor',
             country: 'Ireland',
             countryCode: 'IE',
             rating: 5,
-            treatment: 'Crowns & Bridges',
-            text: 'Professional, caring, and extremely competent. The clinic arranged everything - hotel, airport pickup, even restaurant recommendations. The quality of work is top-notch at a fraction of Irish prices.'
+            treatment: 'Corone e Ponti',
+            text: 'Professionali, attenti ed estremamente competenti. La clinica ha organizzato tutto - hotel, ritiro dall\'aeroporto, persino raccomandazioni sui ristoranti. La qualità del lavoro è eccellente a una frazione dei prezzi irlandesi.'
         }
     ];
 
@@ -69,10 +103,10 @@ const Gallery = () => {
                 {/* Section Header */}
                 <div className='mb-16 text-center'>
                     <h2 className='mb-4 text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl'>
-                        Real Results, <span className='text-primary-600'>Real Smiles</span>
+                        Risultati Reali, <span className='text-primary-600'>Sorrisi Reali</span>
                     </h2>
                     <p className='mx-auto max-w-2xl text-lg text-gray-600'>
-                        See the transformations we've created for patients from around the world
+                        Guarda le trasformazioni che abbiamo creato per pazienti da tutto il mondo
                     </p>
                 </div>
 
@@ -100,19 +134,31 @@ const Gallery = () => {
                             key={index}
                             className='group overflow-hidden rounded-2xl bg-white shadow-md transition-all hover:shadow-xl'
                         >
-                            <div className='relative'>
-                                {/* Before/After Split Image Placeholder */}
-                                <div className='flex aspect-[4/3]'>
-                                    <div className='relative flex-1 bg-gradient-to-br from-gray-300 to-gray-400'>
-                                        <div className='absolute bottom-2 left-2 rounded bg-black/70 px-2 py-1 text-xs font-semibold text-white'>
-                                            Before
-                                        </div>
-                                    </div>
-                                    <div className='relative flex-1 bg-gradient-to-br from-primary-200 to-primary-400'>
-                                        <div className='absolute bottom-2 right-2 rounded bg-black/70 px-2 py-1 text-xs font-semibold text-white'>
-                                            After
-                                        </div>
-                                    </div>
+                            <div className='relative aspect-[4/3] overflow-hidden'>
+                                <ReactCompareSlider
+                                    itemOne={
+                                        <ReactCompareSliderImage
+                                            src={item.before}
+                                            alt='Prima'
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                    }
+                                    itemTwo={
+                                        <ReactCompareSliderImage
+                                            src={item.after}
+                                            alt='Dopo'
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                    }
+                                    position={50}
+                                    className='h-full w-full'
+                                />
+                                {/* Labels */}
+                                <div className='pointer-events-none absolute bottom-2 left-2 rounded bg-black/70 px-2 py-1 text-xs font-semibold text-white'>
+                                    Prima
+                                </div>
+                                <div className='pointer-events-none absolute bottom-2 right-2 rounded bg-black/70 px-2 py-1 text-xs font-semibold text-white'>
+                                    Dopo
                                 </div>
                             </div>
                             <div className='p-4'>
@@ -122,28 +168,32 @@ const Gallery = () => {
                     ))}
                 </div>
 
-                {/* Video Testimonial Placeholder */}
+                {/* Video Testimonial */}
                 <div className='mb-20 overflow-hidden rounded-3xl bg-gradient-to-br from-navy-900 to-navy-700 shadow-2xl'>
                     <div className='grid lg:grid-cols-2'>
-                        <div className='relative aspect-video bg-gradient-to-br from-navy-800 to-navy-600 lg:aspect-auto'>
-                            <div className='absolute inset-0 flex items-center justify-center'>
-                                <button className='group flex h-20 w-20 items-center justify-center rounded-full bg-white/90 transition-all hover:scale-110 hover:bg-white'>
-                                    <Play className='ml-1 h-10 w-10 text-primary-600' />
-                                </button>
-                            </div>
+                        <div className='relative aspect-video bg-black lg:aspect-auto'>
+                            <video
+                                className='h-full w-full object-cover'
+                                controls
+                                preload='metadata'
+                                poster='/videos/testimonial-poster.jpg'
+                            >
+                                <source src='/videos/testimonial.mp4' type='video/mp4' />
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                         <div className='flex items-center p-8 md:p-12'>
                             <div>
                                 <Quote className='mb-4 h-12 w-12 text-primary-400' />
                                 <p className='mb-6 text-xl text-white md:text-2xl'>
-                                    "The best decision I've made for my dental health. Professional, caring, and the
-                                    results speak for themselves."
+                                    "La migliore decisione che ho preso per la mia salute dentale. Professionali, attenti e i
+                                    risultati parlano da soli."
                                 </p>
                                 <div className='flex items-center gap-4'>
                                     <div className='h-16 w-16 rounded-full bg-primary-400' />
                                     <div>
-                                        <p className='font-semibold text-white'>Watch Emma's Story</p>
-                                        <p className='text-sm text-primary-200'>Full Mouth Restoration Patient</p>
+                                        <p className='font-semibold text-white'>Guarda la Storia di Bruno Cosimo</p>
+                                        <p className='text-sm text-primary-200'>Paziente Riabilitazione Completa del Cavo Orale</p>
                                     </div>
                                 </div>
                             </div>
@@ -154,9 +204,9 @@ const Gallery = () => {
                 {/* Written Testimonials */}
                 <div className='mb-12 text-center'>
                     <h3 className='mb-4 text-2xl font-bold text-gray-900 sm:text-3xl'>
-                        What Our Patients Say
+                        Cosa Dicono i Nostri Pazienti
                     </h3>
-                    <p className='text-lg text-gray-600'>Trusted by patients from across Europe</p>
+                    <p className='text-lg text-gray-600'>Fidato da pazienti da tutta Europa</p>
                 </div>
 
                 <div className='grid gap-8 md:grid-cols-2'>

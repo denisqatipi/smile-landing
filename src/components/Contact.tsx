@@ -26,42 +26,42 @@ const Contact = () => {
     const [fileName, setFileName] = useState('');
 
     const countries = [
-        'United Kingdom',
-        'Germany',
-        'Italy',
-        'France',
-        'Netherlands',
-        'Belgium',
+        'Regno Unito',
+        'Germania',
+        'Italia',
+        'Francia',
+        'Paesi Bassi',
+        'Belgio',
         'Austria',
-        'Switzerland',
-        'Ireland',
-        'Spain',
-        'Other'
+        'Svizzera',
+        'Irlanda',
+        'Spagna',
+        'Altro'
     ];
 
     const treatments = [
-        'Dental Implants',
-        'Porcelain Veneers',
-        'Teeth Whitening',
-        'Crowns & Bridges',
-        'Full Mouth Restoration',
-        'Orthodontics',
-        'General Consultation',
-        'Other'
+        'Impianti Dentali',
+        'Faccette in Porcellana',
+        'Sbiancamento Dentale',
+        'Corone e Ponti',
+        'Riabilitazione Completa del Cavo Orale',
+        'Ortodonzia',
+        'Consulenza Generale',
+        'Altro'
     ];
 
     const validateForm = (): boolean => {
         const newErrors: Partial<FormData> = {};
 
-        if (!formData.name.trim()) newErrors.name = 'Name is required';
+        if (!formData.name.trim()) newErrors.name = 'Il nome è obbligatorio';
         if (!formData.email.trim()) {
-            newErrors.email = 'Email is required';
+            newErrors.email = "L'email è obbligatoria";
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-            newErrors.email = 'Invalid email format';
+            newErrors.email = 'Formato email non valido';
         }
-        if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
-        if (!formData.country) newErrors.country = 'Please select your country';
-        if (!formData.treatment) newErrors.treatment = 'Please select a treatment';
+        if (!formData.phone.trim()) newErrors.phone = 'Il numero di telefono è obbligatorio';
+        if (!formData.country) newErrors.country = 'Seleziona il tuo paese';
+        if (!formData.treatment) newErrors.treatment = 'Seleziona un trattamento';
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -115,24 +115,24 @@ const Contact = () => {
                         <div className='mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-primary-600'>
                             <Check className='h-10 w-10 text-white' />
                         </div>
-                        <h3 className='mb-4 text-3xl font-bold text-gray-900'>Thank You!</h3>
+                        <h3 className='mb-4 text-3xl font-bold text-gray-900'>Grazie!</h3>
                         <p className='mb-6 text-lg text-gray-700'>
-                            We've received your inquiry and will get back to you within 24 hours.
+                            Abbiamo ricevuto la tua richiesta e ti risponderemo entro 24 ore.
                         </p>
                         <div className='rounded-xl bg-white p-6 shadow-sm'>
-                            <h4 className='mb-3 font-semibold text-gray-900'>What happens next?</h4>
+                            <h4 className='mb-3 font-semibold text-gray-900'>Cosa succede dopo?</h4>
                             <ul className='space-y-2 text-left text-sm text-gray-600'>
                                 <li className='flex items-start'>
                                     <Check className='mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-primary-600' />
-                                    Our dental coordinator will review your case
+                                    Il nostro coordinatore dentale esaminerà il tuo caso
                                 </li>
                                 <li className='flex items-start'>
                                     <Check className='mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-primary-600' />
-                                    You'll receive a personalized treatment plan
+                                    Riceverai un piano di trattamento personalizzato
                                 </li>
                                 <li className='flex items-start'>
                                     <Check className='mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-primary-600' />
-                                    Schedule a free video consultation with your dentist
+                                    Programma una videoconferenza gratuita con il tuo dentista
                                 </li>
                             </ul>
                         </div>
@@ -148,10 +148,10 @@ const Contact = () => {
                 {/* Section Header */}
                 <div className='mb-16 text-center'>
                     <h2 className='mb-4 text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl'>
-                        Get Your <span className='text-primary-600'>Free Quote</span>
+                        Richiedi il Tuo <span className='text-primary-600'>Preventivo Gratuito</span>
                     </h2>
                     <p className='mx-auto max-w-2xl text-lg text-gray-600'>
-                        Fill out the form below and receive a personalized treatment plan within 24 hours
+                        Compila il modulo qui sotto e ricevi un piano di trattamento personalizzato entro 24 ore
                     </p>
                 </div>
 
@@ -163,7 +163,7 @@ const Contact = () => {
                                 {/* Name */}
                                 <div>
                                     <label htmlFor='name' className='mb-2 block text-sm font-semibold text-gray-900'>
-                                        Full Name *
+                                        Nome Completo *
                                     </label>
                                     <input
                                         type='text'
@@ -180,7 +180,7 @@ const Contact = () => {
                                 {/* Email */}
                                 <div>
                                     <label htmlFor='email' className='mb-2 block text-sm font-semibold text-gray-900'>
-                                        Email Address *
+                                        Indirizzo Email *
                                     </label>
                                     <input
                                         type='email'
@@ -197,7 +197,7 @@ const Contact = () => {
                                 {/* Phone */}
                                 <div>
                                     <label htmlFor='phone' className='mb-2 block text-sm font-semibold text-gray-900'>
-                                        Phone / WhatsApp *
+                                        Telefono / WhatsApp *
                                     </label>
                                     <input
                                         type='tel'
@@ -214,7 +214,7 @@ const Contact = () => {
                                 {/* Country */}
                                 <div>
                                     <label htmlFor='country' className='mb-2 block text-sm font-semibold text-gray-900'>
-                                        Country *
+                                        Paese *
                                     </label>
                                     <select
                                         id='country'
@@ -223,7 +223,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         className={`w-full rounded-lg border ${errors.country ? 'border-red-500' : 'border-gray-300'} bg-white px-4 py-3 text-gray-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20`}
                                     >
-                                        <option value=''>Select your country</option>
+                                        <option value=''>Seleziona il tuo paese</option>
                                         {countries.map((country) => (
                                             <option key={country} value={country}>
                                                 {country}
@@ -239,7 +239,7 @@ const Contact = () => {
                                         htmlFor='treatment'
                                         className='mb-2 block text-sm font-semibold text-gray-900'
                                     >
-                                        Treatment Interested In *
+                                        Trattamento di Interesse *
                                     </label>
                                     <select
                                         id='treatment'
@@ -248,7 +248,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         className={`w-full rounded-lg border ${errors.treatment ? 'border-red-500' : 'border-gray-300'} bg-white px-4 py-3 text-gray-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20`}
                                     >
-                                        <option value=''>Select a treatment</option>
+                                        <option value=''>Seleziona un trattamento</option>
                                         {treatments.map((treatment) => (
                                             <option key={treatment} value={treatment}>
                                                 {treatment}
@@ -261,7 +261,7 @@ const Contact = () => {
                                 {/* Message */}
                                 <div className='md:col-span-2'>
                                     <label htmlFor='message' className='mb-2 block text-sm font-semibold text-gray-900'>
-                                        Tell us about your dental needs
+                                        Raccontaci le tue esigenze dentali
                                     </label>
                                     <textarea
                                         id='message'
@@ -270,14 +270,14 @@ const Contact = () => {
                                         onChange={handleChange}
                                         rows={4}
                                         className='w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20'
-                                        placeholder='Please describe your dental concerns, any pain, or specific goals you have...'
+                                        placeholder='Descrivi le tue preoccupazioni dentali, eventuali dolori o obiettivi specifici che hai...'
                                     />
                                 </div>
 
                                 {/* File Upload */}
                                 <div className='md:col-span-2'>
                                     <label className='mb-2 block text-sm font-semibold text-gray-900'>
-                                        Upload X-rays (optional)
+                                        Carica Radiografie (opzionale)
                                     </label>
                                     <label
                                         htmlFor='file-upload'
@@ -285,7 +285,7 @@ const Contact = () => {
                                     >
                                         <Upload className='mr-3 h-6 w-6 text-gray-400' />
                                         <span className='text-sm text-gray-600'>
-                                            {fileName || 'Click to upload or drag and drop'}
+                                            {fileName || 'Clicca per caricare o trascina qui'}
                                         </span>
                                         <input
                                             id='file-upload'
@@ -296,7 +296,7 @@ const Contact = () => {
                                         />
                                     </label>
                                     <p className='mt-2 text-xs text-gray-500'>
-                                        Supported formats: JPG, PNG, PDF (Max 10MB)
+                                        Formati supportati: JPG, PNG, PDF (Max 10MB)
                                     </p>
                                 </div>
                             </div>
@@ -306,10 +306,10 @@ const Contact = () => {
                                 type='submit'
                                 className='mt-8 w-full rounded-lg bg-primary-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:bg-primary-700 hover:shadow-xl'
                             >
-                                Get My Free Quote
+                                Richiedi il Mio Preventivo Gratuito
                             </button>
                             <p className='mt-4 text-center text-sm text-gray-500'>
-                                We respect your privacy. Your information is secure and will never be shared.
+                                Rispettiamo la tua privacy. Le tue informazioni sono sicure e non saranno mai condivise.
                             </p>
                         </form>
                     </div>
@@ -317,11 +317,11 @@ const Contact = () => {
                     {/* Contact Information */}
                     <div className='space-y-6'>
                         <div className='rounded-2xl bg-gradient-to-br from-primary-600 to-primary-500 p-8 text-white shadow-lg'>
-                            <h3 className='mb-6 text-2xl font-bold'>Contact Information</h3>
+                            <h3 className='mb-6 text-2xl font-bold'>Informazioni di Contatto</h3>
 
                             <div className='space-y-6'>
                                 <a
-                                    href='https://wa.me/355691234567'
+                                    href='https://wa.me/355698082222'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     className='flex items-start transition-transform hover:translate-x-1'
@@ -329,55 +329,55 @@ const Contact = () => {
                                     <MessageSquare className='mr-4 mt-1 h-6 w-6 flex-shrink-0' />
                                     <div>
                                         <p className='mb-1 text-sm font-medium text-primary-100'>WhatsApp</p>
-                                        <p className='font-semibold'>+355 69 123 4567</p>
-                                        <p className='text-sm text-primary-100'>Click to chat now</p>
+                                        <p className='font-semibold'>+355 69 808 2222</p>
+                                        <p className='text-sm text-primary-100'>Clicca per chattare ora</p>
                                     </div>
                                 </a>
 
                                 <a
-                                    href='tel:+355691234567'
+                                    href='tel:+355698082222'
                                     className='flex items-start transition-transform hover:translate-x-1'
                                 >
                                     <Phone className='mr-4 mt-1 h-6 w-6 flex-shrink-0' />
                                     <div>
-                                        <p className='mb-1 text-sm font-medium text-primary-100'>Phone</p>
-                                        <p className='font-semibold'>+355 69 123 4567</p>
-                                        <p className='text-sm text-primary-100'>Mon-Fri: 9AM-6PM CET</p>
+                                        <p className='mb-1 text-sm font-medium text-primary-100'>Telefono</p>
+                                        <p className='font-semibold'>+355 69 808 2222</p>
+                                        <p className='text-sm text-primary-100'>Lun-Ven: 9:00-18:00 CET</p>
                                     </div>
                                 </a>
 
                                 <a
-                                    href='mailto:info@smiledentalalba.com'
+                                    href='mailto:infosmileprovider@gmail.com'
                                     className='flex items-start transition-transform hover:translate-x-1'
                                 >
                                     <Mail className='mr-4 mt-1 h-6 w-6 flex-shrink-0' />
                                     <div>
                                         <p className='mb-1 text-sm font-medium text-primary-100'>Email</p>
-                                        <p className='font-semibold'>info@smiledentalalba.com</p>
-                                        <p className='text-sm text-primary-100'>24-hour response time</p>
+                                        <p className='font-semibold'>infosmileprovider@gmail.com</p>
+                                        <p className='text-sm text-primary-100'>Risposta entro 24 ore</p>
                                     </div>
                                 </a>
                             </div>
                         </div>
 
                         <div className='rounded-2xl bg-accent-50 p-8'>
-                            <h4 className='mb-4 text-lg font-bold text-gray-900'>Why Get a Free Quote?</h4>
+                            <h4 className='mb-4 text-lg font-bold text-gray-900'>Perché Richiedere un Preventivo Gratuito?</h4>
                             <ul className='space-y-3 text-sm text-gray-700'>
                                 <li className='flex items-start'>
                                     <Check className='mr-2 mt-0.5 h-5 w-5 flex-shrink-0 text-accent-600' />
-                                    Personalized treatment plan tailored to your needs
+                                    Piano di trattamento personalizzato su misura per te
                                 </li>
                                 <li className='flex items-start'>
                                     <Check className='mr-2 mt-0.5 h-5 w-5 flex-shrink-0 text-accent-600' />
-                                    Transparent pricing breakdown with no hidden fees
+                                    Prezzi trasparenti senza costi nascosti
                                 </li>
                                 <li className='flex items-start'>
                                     <Check className='mr-2 mt-0.5 h-5 w-5 flex-shrink-0 text-accent-600' />
-                                    Compare costs and see how much you'll save
+                                    Confronta i costi e scopri quanto risparmi
                                 </li>
                                 <li className='flex items-start'>
                                     <Check className='mr-2 mt-0.5 h-5 w-5 flex-shrink-0 text-accent-600' />
-                                    No obligation - just honest advice
+                                    Nessun obbligo - solo consigli onesti
                                 </li>
                             </ul>
                         </div>

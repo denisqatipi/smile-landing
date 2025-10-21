@@ -1,35 +1,44 @@
 'use client';
 
 import { Award, GraduationCap, Languages, Users } from 'lucide-react';
+import { useState } from 'react';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 const Doctors = () => {
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [lightboxIndex, setLightboxIndex] = useState(0);
+
     const doctors = [
         {
-            name: 'Dr. Arben Krasniqi',
-            title: 'Lead Implantologist',
-            experience: '15+ years',
-            education: 'University of Vienna, Austria',
-            specialization: 'Dental Implants & Full Mouth Restoration',
-            languages: ['English', 'German', 'Italian', 'Albanian'],
-            patients: '2000+'
+            name: 'Dr. Donatela Laska',
+            title: 'Implantologo Capo',
+            experience: '15+ anni',
+            education: 'Università di Vienna, Austria',
+            specialization: 'Impianti Dentali e Riabilitazione Completa del Cavo Orale',
+            languages: ['Inglese', 'Tedesco', 'Italiano', 'Albanese'],
+            patients: '2000+',
+            image: '/images/doctors/doctor-1.jpg'
         },
         {
-            name: 'Dr. Elira Morina',
-            title: 'Cosmetic Dentistry Specialist',
-            experience: '12+ years',
-            education: 'University of Florence, Italy',
-            specialization: 'Veneers, Teeth Whitening & Smile Design',
-            languages: ['English', 'Italian', 'Albanian'],
-            patients: '1500+'
+            name: 'Dr. Denisa Hazballa',
+            title: 'Specialista in Odontoiatria Estetica',
+            experience: '12+ anni',
+            education: 'Università di Firenze, Italia',
+            specialization: 'Faccette, Sbiancamento Dentale e Design del Sorriso',
+            languages: ['Inglese', 'Italiano', 'Albanese'],
+            patients: '1500+',
+            image: '/images/doctors/doctor-2.jpg'
         },
         {
-            name: 'Dr. Blerim Hoxha',
-            title: 'Prosthodontist',
-            experience: '18+ years',
-            education: 'University of Athens, Greece',
-            specialization: 'Crowns, Bridges & Dentures',
-            languages: ['English', 'Greek', 'Albanian'],
-            patients: '2500+'
+            name: 'Dr. Kostika Vera',
+            title: 'Prostodontista',
+            experience: '18+ anni',
+            education: 'Università di Atene, Grecia',
+            specialization: 'Corone, Ponti e Protesi',
+            languages: ['Inglese', 'Greco', 'Albanese'],
+            patients: '2500+',
+            image: '/images/doctors/doctor-3.jpg'
         }
     ];
 
@@ -39,10 +48,10 @@ const Doctors = () => {
                 {/* Section Header */}
                 <div className='mb-16 text-center'>
                     <h2 className='mb-4 text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl'>
-                        Meet Our <span className='text-primary-600'>Experienced Doctors</span>
+                        Incontra i Nostri <span className='text-primary-600'>Dottori Esperti</span>
                     </h2>
                     <p className='mx-auto max-w-2xl text-lg text-gray-600'>
-                        Internationally trained specialists dedicated to transforming your smile
+                        Specialisti formati a livello internazionale dedicati a trasformare il tuo sorriso
                     </p>
                 </div>
 
@@ -53,11 +62,19 @@ const Doctors = () => {
                             key={index}
                             className='group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-md transition-all hover:border-primary-300 hover:shadow-2xl'
                         >
-                            {/* Doctor Photo Placeholder */}
-                            <div className='relative aspect-[3/4] bg-gradient-to-br from-primary-100 via-primary-200 to-primary-300'>
-                                <div className='absolute inset-0 flex items-center justify-center'>
-                                    <Users className='h-24 w-24 text-primary-600/40' />
-                                </div>
+                            {/* Doctor Photo */}
+                            <div
+                                className='relative aspect-[3/4] cursor-pointer overflow-hidden bg-gray-100'
+                                onClick={() => {
+                                    setLightboxIndex(index);
+                                    setLightboxOpen(true);
+                                }}
+                            >
+                                <img
+                                    src={doctor.image}
+                                    alt={doctor.name}
+                                    className='h-full w-full object-cover transition-transform duration-300 group-hover:scale-105'
+                                />
                             </div>
 
                             {/* Doctor Info */}
@@ -69,7 +86,7 @@ const Doctors = () => {
                                 <div className='mb-4 flex items-start space-x-3'>
                                     <GraduationCap className='mt-1 h-5 w-5 flex-shrink-0 text-navy-600' />
                                     <div>
-                                        <p className='text-sm font-semibold text-gray-900'>Education</p>
+                                        <p className='text-sm font-semibold text-gray-900'>Istruzione</p>
                                         <p className='text-sm text-gray-600'>{doctor.education}</p>
                                     </div>
                                 </div>
@@ -78,9 +95,9 @@ const Doctors = () => {
                                 <div className='mb-4 flex items-start space-x-3'>
                                     <Award className='mt-1 h-5 w-5 flex-shrink-0 text-accent-600' />
                                     <div>
-                                        <p className='text-sm font-semibold text-gray-900'>Experience</p>
+                                        <p className='text-sm font-semibold text-gray-900'>Esperienza</p>
                                         <p className='text-sm text-gray-600'>
-                                            {doctor.experience} • {doctor.patients} patients
+                                            {doctor.experience} • {doctor.patients} pazienti
                                         </p>
                                     </div>
                                 </div>
@@ -88,7 +105,7 @@ const Doctors = () => {
                                 {/* Specialization */}
                                 <div className='mb-4 rounded-xl bg-primary-50 p-3'>
                                     <p className='text-xs font-semibold uppercase tracking-wide text-primary-600'>
-                                        Specialization
+                                        Specializzazione
                                     </p>
                                     <p className='mt-1 text-sm font-medium text-gray-900'>{doctor.specialization}</p>
                                 </div>
@@ -97,7 +114,7 @@ const Doctors = () => {
                                 <div className='flex items-start space-x-3'>
                                     <Languages className='mt-1 h-5 w-5 flex-shrink-0 text-gray-600' />
                                     <div>
-                                        <p className='text-sm font-semibold text-gray-900'>Languages</p>
+                                        <p className='text-sm font-semibold text-gray-900'>Lingue</p>
                                         <div className='mt-2 flex flex-wrap gap-2'>
                                             {doctor.languages.map((lang, langIndex) => (
                                                 <span
@@ -118,11 +135,10 @@ const Doctors = () => {
                 {/* Call to Action */}
                 <div className='mt-16 rounded-3xl bg-gradient-to-r from-primary-600 to-primary-500 p-8 text-center md:p-12'>
                     <h3 className='mb-4 text-2xl font-bold text-white sm:text-3xl'>
-                        Meet Your Doctor During Free Online Consultation
+                        Incontra il Tuo Dottore Durante una Consulenza Online Gratuita
                     </h3>
                     <p className='mx-auto mb-6 max-w-2xl text-lg text-primary-100'>
-                        Get to know our team, discuss your needs, and receive a personalized treatment plan before you
-                        travel
+                        Conosci il nostro team, discuti le tue esigenze e ricevi un piano di trattamento personalizzato prima di viaggiare
                     </p>
                     <button
                         onClick={() => {
@@ -131,9 +147,17 @@ const Doctors = () => {
                         }}
                         className='rounded-lg bg-white px-8 py-4 text-lg font-semibold text-primary-600 shadow-lg transition-all hover:bg-gray-50 hover:shadow-xl'
                     >
-                        Book Free Consultation
+                        Prenota Consulenza Gratuita
                     </button>
                 </div>
+
+                {/* Lightbox */}
+                <Lightbox
+                    open={lightboxOpen}
+                    close={() => setLightboxOpen(false)}
+                    index={lightboxIndex}
+                    slides={doctors.map((doctor) => ({ src: doctor.image, alt: doctor.name }))}
+                />
             </div>
         </section>
     );

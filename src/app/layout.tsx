@@ -5,6 +5,8 @@ import localFont from 'next/font/local';
 
 import { ThemeProvider } from 'next-themes';
 
+import WhatsAppButton from '@/components/WhatsAppButton';
+
 import '@/app/globals.css';
 
 const geistSans = localFont({
@@ -21,8 +23,8 @@ const geistMono = localFont({
 export const metadata: Metadata = {
     metadataBase: new URL('https://smiledentalalba.com'),
     title: {
-        default: 'Smile Dental Albania - Premium Dental Tourism | Save up to 70%',
-        template: '%s | Smile Dental Albania'
+        default: 'SmileProvider - Premium Dental Tourism Albania | Save up to 70%',
+        template: '%s | SmileProvider'
     },
     description:
         'Transform your smile at half the price with premium dental care in Albania. European standards, experienced multilingual dentists, Mediterranean location. 1000+ international patients trust us.',
@@ -38,19 +40,19 @@ export const metadata: Metadata = {
         'dental tourism Mediterranean',
         'full mouth restoration Albania'
     ],
-    authors: [{ name: 'Smile Dental Albania' }],
+    authors: [{ name: 'SmileProvider' }],
     openGraph: {
-        title: 'Smile Dental Albania - Premium Dental Tourism | Save up to 70%',
+        title: 'SmileProvider - Premium Dental Tourism Albania | Save up to 70%',
         description:
             'Transform your smile at half the price with premium dental care in Albania. European standards, experienced multilingual dentists, Mediterranean location.',
         url: 'https://smiledentalalba.com',
-        siteName: 'Smile Dental Albania',
+        siteName: 'SmileProvider',
         images: [
             {
                 url: '/og-image.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'Smile Dental Albania - Premium Dental Tourism'
+                alt: 'SmileProvider - Premium Dental Tourism Albania'
             }
         ],
         locale: 'en_US',
@@ -58,7 +60,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Smile Dental Albania - Premium Dental Tourism | Save up to 70%',
+        title: 'SmileProvider - Premium Dental Tourism Albania | Save up to 70%',
         description:
             'Transform your smile at half the price with premium dental care in Albania. European standards, experienced multilingual dentists.',
         images: ['/og-image.jpg']
@@ -83,17 +85,17 @@ const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
     const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'Dentist',
-        name: 'Smile Dental Albania',
+        name: 'Smile Provider Dental Clinic',
         image: 'https://smiledentalalba.com/clinic-front.jpg',
         '@id': 'https://smiledentalalba.com',
         url: 'https://smiledentalalba.com',
-        telephone: '+355-69-123-4567',
+        telephone: '+355-69-808-2222',
+        email: 'infosmileprovider@gmail.com',
         priceRange: '€€',
         address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Rruga e Durresit',
-            addressLocality: 'Tirana',
-            postalCode: '1001',
+            streetAddress: 'Rruga Martin Camaj 113',
+            addressLocality: 'Tirane',
             addressCountry: 'AL'
         },
         geo: {
@@ -110,9 +112,9 @@ const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
             }
         ],
         sameAs: [
-            'https://www.facebook.com/smiledentalalba',
-            'https://www.instagram.com/smiledentalalba',
-            'https://wa.me/355691234567'
+            'https://www.facebook.com/smileproviderdentistiinalbania/',
+            'https://www.instagram.com/smile_provider_dental_clinic/',
+            'https://wa.me/355698082222'
         ],
         medicalSpecialty: ['Dentistry', 'Dental Implants', 'Cosmetic Dentistry', 'Orthodontics']
     };
@@ -129,6 +131,7 @@ const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
             </head>
             <body className={`${geistSans.variable} ${geistMono.variable} bg-white text-gray-900 antialiased`}>
                 <ThemeProvider attribute='class'>{children}</ThemeProvider>
+                <WhatsAppButton />
             </body>
         </html>
     );

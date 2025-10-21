@@ -12,7 +12,7 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 /**
- * Main landing page for Smile Dental Albania - Dental Tourism
+ * Main landing page for SmileProvider - Dental Tourism
  *
  * @returns {JSX.Element} The complete dental tourism landing page
  */

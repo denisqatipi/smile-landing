@@ -7,49 +7,49 @@ const Journey = () => {
         {
             number: 1,
             icon: MessageSquare,
-            title: 'Free Online Consultation',
+            title: 'Consulenza Online Gratuita',
             description:
-                'Share your dental concerns and X-rays. Meet your dentist via video call and receive a detailed treatment plan with transparent pricing.',
+                'Condividi le tue preoccupazioni dentali e le radiografie. Incontra il tuo dentista tramite videochiamata e ricevi un piano di trattamento dettagliato con prezzi trasparenti.',
             color: 'primary'
         },
         {
             number: 2,
             icon: ClipboardCheck,
-            title: 'Treatment Plan Approval',
+            title: 'Approvazione del Piano di Trattamento',
             description:
-                'Review your personalized treatment plan, timeline, and cost breakdown. Ask questions and make adjustments until you are completely satisfied.',
+                'Esamina il tuo piano di trattamento personalizzato, la tempistica e la ripartizione dei costi. Fai domande e apporta modifiche fino a quando non sei completamente soddisfatto.',
             color: 'navy'
         },
         {
             number: 3,
             icon: Calendar,
-            title: 'Travel Arrangements',
+            title: 'Organizzazione del Viaggio',
             description:
-                'We help you book flights and accommodation. Choose from our partner hotels near the clinic with special rates for dental patients.',
+                'Ti aiutiamo a prenotare voli e alloggio. Scegli tra i nostri hotel partner vicino alla clinica con tariffe speciali per pazienti dentali.',
             color: 'accent'
         },
         {
             number: 4,
             icon: Car,
-            title: 'Arrival & Airport Pickup',
+            title: 'Arrivo e Ritiro dall\'Aeroporto',
             description:
-                'Land in Tirana and we will pick you up from the airport. Transfer to your hotel and settle in. Your treatment begins the next day.',
+                'Atterra a Tirana e ti veniamo a prendere dall\'aeroporto. Trasferimento in hotel e sistemazione. Il trattamento inizia il giorno successivo.',
             color: 'primary'
         },
         {
             number: 5,
             icon: HeartPulse,
-            title: 'Treatment & Recovery',
+            title: 'Trattamento e Recupero',
             description:
-                'Receive world-class dental care in our modern clinic. Between appointments, explore Tirana or relax at nearby beaches.',
+                'Ricevi cure dentali di livello mondiale nella nostra clinica moderna. Tra un appuntamento e l\'altro, esplora Tirana o rilassati nelle spiagge vicine.',
             color: 'navy'
         },
         {
             number: 6,
             icon: Plane,
-            title: 'Fly Home with Confidence',
+            title: 'Torna a Casa con Fiducia',
             description:
-                'Return home with your new smile and comprehensive aftercare instructions. We provide 24/7 support for any post-treatment questions.',
+                'Torna a casa con il tuo nuovo sorriso e istruzioni complete per il post-trattamento. Forniamo supporto 24/7 per qualsiasi domanda post-trattamento.',
             color: 'accent'
         }
     ];
@@ -89,10 +89,10 @@ const Journey = () => {
                 {/* Section Header */}
                 <div className='mb-16 text-center'>
                     <h2 className='mb-4 text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl'>
-                        Your <span className='text-primary-600'>Journey</span> to a Perfect Smile
+                        Il Tuo <span className='text-primary-600'>Percorso</span> verso un Sorriso Perfetto
                     </h2>
                     <p className='mx-auto max-w-2xl text-lg text-gray-600'>
-                        From first consultation to flying home - we guide you every step of the way
+                        Dalla prima consulenza al ritorno a casa - ti guidiamo in ogni passo del percorso
                     </p>
                 </div>
 
@@ -210,7 +210,7 @@ const Journey = () => {
                         }}
                         className='rounded-lg bg-primary-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:bg-primary-700 hover:shadow-xl'
                     >
-                        Start Your Journey Today
+                        Inizia il Tuo Percorso Oggi
                     </button>
                 </div>
             </div>

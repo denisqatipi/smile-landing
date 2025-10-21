@@ -23,12 +23,12 @@ const Hero = () => {
                     {/* Savings Badge */}
                     <div className='mb-6 inline-flex items-center rounded-full bg-accent-100 px-4 py-2 text-sm font-semibold text-accent-700'>
                         <span className='mr-2 text-xl'>💰</span>
-                        Save up to 70% on Dental Treatments
+                        Risparmia fino al 70% sui Trattamenti Dentali
                     </div>
 
                     {/* Main Headline */}
                     <h1 className='mb-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl'>
-                        Transform Your Smile in{' '}
+                        Trasforma il Tuo Sorriso in{' '}
                         <span className='bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent'>
                             Albania
                         </span>
@@ -36,8 +36,8 @@ const Hero = () => {
 
                     {/* Subheadline */}
                     <p className='mx-auto mb-10 max-w-3xl text-lg text-gray-600 sm:text-xl md:text-2xl'>
-                        Premium dental care at half the price. European standards meet Mediterranean beauty. Experience
-                        world-class dentistry while enjoying a coastal holiday.
+                        Cure dentali premium a metà prezzo. Standard europei incontrano la bellezza mediterranea. Vivi
+                        l'odontoiatria di classe mondiale godendoti una vacanza sulla costa.
                     </p>
 
                     {/* CTAs */}
@@ -46,13 +46,13 @@ const Hero = () => {
                             onClick={() => handleScroll('#contact')}
                             className='w-full rounded-lg bg-primary-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:bg-primary-700 hover:shadow-xl sm:w-auto'
                         >
-                            Get Your Free Quote
+                            Richiedi il Tuo Preventivo Gratuito
                         </button>
                         <button
                             onClick={() => handleScroll('#journey')}
                             className='w-full rounded-lg border-2 border-navy-600 px-8 py-4 text-lg font-semibold text-navy-600 transition-all hover:bg-navy-50 sm:w-auto'
                         >
-                            Plan Your Dental Trip
+                            Pianifica il Tuo Viaggio Dentale
                         </button>
                     </div>
 
@@ -63,7 +63,7 @@ const Hero = () => {
                                 <Users className='h-7 w-7 text-primary-600' />
                             </div>
                             <div className='text-3xl font-bold text-gray-900'>1000+</div>
-                            <div className='text-sm text-gray-600'>International Patients</div>
+                            <div className='text-sm text-gray-600'>Pazienti Internazionali</div>
                         </div>
 
                         <div className='flex flex-col items-center rounded-2xl bg-white p-6 shadow-md transition-shadow hover:shadow-lg'>
@@ -71,7 +71,7 @@ const Hero = () => {
                                 <Award className='h-7 w-7 text-accent-600' />
                             </div>
                             <div className='text-3xl font-bold text-gray-900'>EU</div>
-                            <div className='text-sm text-gray-600'>Certified Materials</div>
+                            <div className='text-sm text-gray-600'>Materiali Certificati</div>
                         </div>
 
                         <div className='flex flex-col items-center rounded-2xl bg-white p-6 shadow-md transition-shadow hover:shadow-lg'>
@@ -79,7 +79,7 @@ const Hero = () => {
                                 <Globe className='h-7 w-7 text-navy-600' />
                             </div>
                             <div className='text-3xl font-bold text-gray-900'>5</div>
-                            <div className='text-sm text-gray-600'>Languages Spoken</div>
+                            <div className='text-sm text-gray-600'>Lingue Parlate</div>
                         </div>
                     </div>
                 </div>

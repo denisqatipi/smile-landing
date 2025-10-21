@@ -8,15 +8,12 @@ const Header = () => {
 
     const navItems = [
         { label: 'Home', href: '#home' },
-        { label: 'Why Albania', href: '#why-albania' },
-        { label: 'Clinic', href: '#clinic' },
-        { label: 'Doctors', href: '#doctors' },
-        { label: 'Treatments', href: '#treatments' },
-        { label: 'Journey', href: '#journey' },
-        { label: 'Gallery', href: '#gallery' },
-        { label: 'Destination', href: '#destination' },
+        { label: 'Clinica', href: '#clinic' },
+        { label: 'Dottori', href: '#doctors' },
+        { label: 'Trattamenti', href: '#treatments' },
+        { label: 'Galleria', href: '#gallery' },
         { label: 'FAQ', href: '#faq' },
-        { label: 'Contact', href: '#contact' }
+        { label: 'Contatti', href: '#contact' }
     ];
 
     const handleNavClick = (href: string) => {
@@ -34,13 +31,12 @@ const Header = () => {
                     {/* Logo */}
                     <div className='flex items-center'>
                         <a href='#home' className='text-2xl font-bold text-primary-600'>
-                            Smile<span className='text-accent-500'>Dental</span>
-                            <span className='ml-1 text-base text-navy-600'>Albania</span>
+                            Smile<span className='text-accent-500'>Provider</span>
                         </a>
                     </div>
 
                     {/* Desktop Navigation */}
-                    <nav className='hidden lg:flex lg:items-center lg:space-x-6'>
+                    <nav className='hidden lg:flex lg:items-center lg:space-x-8'>
                         {navItems.map((item) => (
                             <a
                                 key={item.href}
@@ -56,24 +52,17 @@ const Header = () => {
                         ))}
                     </nav>
 
-                    {/* Contact Info & CTA */}
-                    <div className='hidden items-center space-x-4 lg:flex'>
-                        <a
-                            href='tel:+355691234567'
-                            className='flex items-center space-x-2 text-sm font-medium text-navy-600 hover:text-navy-700'
-                        >
-                            <Phone className='h-4 w-4' />
-                            <span>+355 69 123 4567</span>
-                        </a>
+                    {/* CTA */}
+                    <div className='hidden items-center lg:flex'>
                         <a
                             href='#contact'
                             onClick={(e) => {
                                 e.preventDefault();
                                 handleNavClick('#contact');
                             }}
-                            className='rounded-lg bg-primary-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-primary-700 hover:shadow-md'
+                            className='whitespace-nowrap rounded-lg bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-primary-700 hover:shadow-md'
                         >
-                            Get Free Quote
+                            Richiedi Preventivo
                         </a>
                     </div>
 
@@ -105,11 +94,11 @@ const Header = () => {
                                 </a>
                             ))}
                             <a
-                                href='tel:+355691234567'
+                                href='tel:+355698082222'
                                 className='flex items-center space-x-2 text-base font-medium text-navy-600'
                             >
                                 <Phone className='h-5 w-5' />
-                                <span>+355 69 123 4567</span>
+                                <span>+355 69 808 2222</span>
                             </a>
                             <a
                                 href='#contact'
@@ -119,7 +108,7 @@ const Header = () => {
                                 }}
                                 className='rounded-lg bg-primary-600 px-6 py-3 text-center text-base font-semibold text-white'
                             >
-                                Get Free Quote
+                                Richiedi Preventivo
                             </a>
                         </nav>
                     </div>

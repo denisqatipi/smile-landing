@@ -8,40 +8,40 @@ const FAQ = () => {
 
     const faqs = [
         {
-            category: 'Safety',
+            category: 'Sicurezza',
             icon: Shield,
-            question: 'Is dental treatment in Albania safe?',
-            answer: 'Absolutely. Our clinic meets all European Union standards for dental care. We use EU-certified materials, follow strict sterilization protocols (EN 13060 Class B), and our dentists are internationally trained with years of experience treating patients from Western Europe. We maintain the same standards you would expect in the UK, Germany, or Italy.'
+            question: 'Il trattamento dentale in Albania è sicuro?',
+            answer: 'Assolutamente. La nostra clinica soddisfa tutti gli standard dell\'Unione Europea per le cure dentali. Utilizziamo materiali certificati UE, seguiamo rigorosi protocolli di sterilizzazione (EN 13060 Classe B) e i nostri dentisti sono formati a livello internazionale con anni di esperienza nel trattamento di pazienti dall\'Europa occidentale. Manteniamo gli stessi standard che ti aspetteresti nel Regno Unito, Germania o Italia.'
         },
         {
-            category: 'Cost',
+            category: 'Costi',
             icon: Euro,
-            question: 'Why are treatments so much cheaper in Albania?',
-            answer: 'The lower cost of living in Albania allows us to offer the same quality materials and expertise at 50-70% lower prices. Our dentists use the same premium European materials (German implants, Italian ceramics) as Western clinics, but our overhead costs - rent, staff salaries, operational expenses - are significantly lower. You benefit from these savings without any compromise on quality.'
+            question: 'Perché i trattamenti sono molto più economici in Albania?',
+            answer: 'Il minor costo della vita in Albania ci consente di offrire gli stessi materiali e competenze di qualità a prezzi inferiori del 50-70%. I nostri dentisti utilizzano gli stessi materiali europei premium (impianti tedeschi, ceramiche italiane) delle cliniche occidentali, ma i nostri costi generali - affitto, stipendi del personale, spese operative - sono significativamente più bassi. Benefici di questi risparmi senza alcun compromesso sulla qualità.'
         },
         {
-            category: 'Duration',
+            category: 'Durata',
             icon: Clock,
-            question: 'How long do I need to stay in Albania?',
-            answer: 'Treatment duration varies by procedure: Simple treatments like veneers or crowns: 5-7 days, Dental implants: 3-6 months total (split into 2 short visits), Full mouth restoration: 7-14 days, Teeth whitening: 1 day. We optimize your treatment schedule to minimize your time away from home while ensuring proper healing and quality results.'
+            question: 'Quanto tempo devo rimanere in Albania?',
+            answer: 'La durata del trattamento varia in base alla procedura: Trattamenti semplici come faccette o corone: 5-7 giorni, Impianti dentali: 3-6 mesi in totale (divisi in 2 brevi visite), Riabilitazione completa del cavo orale: 7-14 giorni, Sbiancamento dentale: 1 giorno. Ottimizziamo il tuo programma di trattamento per ridurre al minimo il tempo lontano da casa garantendo al contempo una corretta guarigione e risultati di qualità.'
         },
         {
-            category: 'Warranty',
+            category: 'Garanzia',
             icon: Shield,
-            question: 'What about warranties and follow-up care?',
-            answer: 'All our work comes with comprehensive warranties: Dental implants: 10-year warranty, Veneers and crowns: 5-year warranty, Orthodontics: Treatment completion guarantee. We provide 24/7 support after you return home. For any issues, we offer free consultations and if needed, we can arrange follow-up treatment. We also partner with dentists in major European cities for emergency support.'
+            question: 'E per quanto riguarda le garanzie e il follow-up?',
+            answer: 'Tutto il nostro lavoro è coperto da garanzie complete: Impianti dentali: garanzia di 10 anni, Faccette e corone: garanzia di 5 anni, Ortodonzia: garanzia di completamento del trattamento. Forniamo supporto 24/7 dopo il tuo ritorno a casa. Per qualsiasi problema, offriamo consulenze gratuite e, se necessario, possiamo organizzare un trattamento di follow-up. Collaboriamo anche con dentisti nelle principali città europee per il supporto di emergenza.'
         },
         {
-            category: 'Travel',
+            category: 'Viaggio',
             icon: Plane,
-            question: 'Do you help with travel arrangements?',
-            answer: 'Yes! We provide comprehensive travel support: Free airport pickup from Tirana International Airport, Partner hotel recommendations with special rates (€40-80/night), Treatment schedule coordination with your travel plans, Local recommendations for restaurants and activities, Assistance with appointment scheduling to maximize your free time. Our team will guide you through every step of the process.'
+            question: 'Aiutate con l\'organizzazione del viaggio?',
+            answer: 'Sì! Forniamo supporto completo per il viaggio: Ritiro gratuito dall\'Aeroporto Internazionale di Tirana, Raccomandazioni di hotel partner con tariffe speciali (€40-80/notte), Coordinamento del programma di trattamento con i tuoi piani di viaggio, Raccomandazioni locali per ristoranti e attività, Assistenza con la programmazione degli appuntamenti per massimizzare il tuo tempo libero. Il nostro team ti guiderà in ogni fase del processo.'
         },
         {
-            category: 'Support',
+            category: 'Supporto',
             icon: HeadphonesIcon,
-            question: 'What if I need help after returning home?',
-            answer: 'We provide comprehensive aftercare support: 24/7 WhatsApp support line with our dentists, Detailed aftercare instructions in your language, Video consultations if you have concerns, Emergency partner network in major European cities, Free follow-up digital consultations. Most patients have zero issues, but we are always available if you need us.'
+            question: 'E se ho bisogno di aiuto dopo essere tornato a casa?',
+            answer: 'Forniamo supporto post-trattamento completo: Linea di supporto WhatsApp 24/7 con i nostri dentisti, Istruzioni dettagliate per il post-trattamento nella tua lingua, Consulenze video se hai preoccupazioni, Rete di partner di emergenza nelle principali città europee, Consulenze digitali di follow-up gratuite. La maggior parte dei pazienti non ha problemi, ma siamo sempre disponibili se hai bisogno di noi.'
         }
     ];
 
@@ -58,9 +58,9 @@ const FAQ = () => {
                         <HelpCircle className='h-8 w-8 text-primary-600' />
                     </div>
                     <h2 className='mb-4 text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl'>
-                        Frequently Asked <span className='text-primary-600'>Questions</span>
+                        Domande <span className='text-primary-600'>Frequenti</span>
                     </h2>
-                    <p className='text-lg text-gray-600'>Everything you need to know about dental tourism in Albania</p>
+                    <p className='text-lg text-gray-600'>Tutto quello che devi sapere sul turismo dentale in Albania</p>
                 </div>
 
                 {/* FAQ Accordion */}
@@ -110,9 +110,9 @@ const FAQ = () => {
 
                 {/* Still Have Questions CTA */}
                 <div className='mt-12 rounded-2xl bg-gradient-to-r from-primary-600 to-primary-500 p-8 text-center md:p-10'>
-                    <h3 className='mb-3 text-2xl font-bold text-white'>Still have questions?</h3>
+                    <h3 className='mb-3 text-2xl font-bold text-white'>Hai ancora domande?</h3>
                     <p className='mb-6 text-primary-100'>
-                        Our team is here to help. Get in touch for a free consultation.
+                        Il nostro team è qui per aiutarti. Contattaci per una consulenza gratuita.
                     </p>
                     <button
                         onClick={() => {
@@ -121,7 +121,7 @@ const FAQ = () => {
                         }}
                         className='rounded-lg bg-white px-8 py-3 text-lg font-semibold text-primary-600 shadow-lg transition-all hover:bg-gray-50 hover:shadow-xl'
                     >
-                        Contact Us Now
+                        Contattaci Ora
                     </button>
                 </div>
             </div>
