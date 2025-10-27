@@ -1,6 +1,6 @@
 'use client';
 
-import { Check, Mail, MessageSquare, Phone, Upload } from 'lucide-react';
+import { Check, Mail, MessageSquare, Upload } from 'lucide-react';
 import { useState } from 'react';
 
 interface FormData {
@@ -331,18 +331,6 @@ const Contact = () => {
                                         <p className='mb-1 text-sm font-medium text-primary-100'>WhatsApp</p>
                                         <p className='font-semibold'>+355 69 808 2222</p>
                                         <p className='text-sm text-primary-100'>Clicca per chattare ora</p>
-                                    </div>
-                                </a>
-
-                                <a
-                                    href='tel:+355698082222'
-                                    className='flex items-start transition-transform hover:translate-x-1'
-                                >
-                                    <Phone className='mr-4 mt-1 h-6 w-6 flex-shrink-0' />
-                                    <div>
-                                        <p className='mb-1 text-sm font-medium text-primary-100'>Telefono</p>
-                                        <p className='font-semibold'>+355 69 808 2222</p>
-                                        <p className='text-sm text-primary-100'>Lun-Ven: 9:00-18:00 CET</p>
                                     </div>
                                 </a>
 

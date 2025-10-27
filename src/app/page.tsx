@@ -9,6 +9,7 @@ import Gallery from '@/components/Gallery';
 import Destination from '@/components/Destination';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
+import Certifications from '@/components/Certifications';
 import Footer from '@/components/Footer';
 
 /**
@@ -31,6 +32,7 @@ const Page = () => {
                 <Destination />
                 <FAQ />
                 <Contact />
+                <Certifications />
             </main>
             <Footer />
         </>
