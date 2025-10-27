@@ -8,6 +8,8 @@ import 'yet-another-react-lightbox/styles.css';
 const Doctors = () => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
+    const [worksLightboxOpen, setWorksLightboxOpen] = useState(false);
+    const [worksLightboxIndex, setWorksLightboxIndex] = useState(0);
 
     const doctors = [
         {
@@ -42,13 +44,28 @@ const Doctors = () => {
         }
     ];
 
+    const works = [
+        {
+            src: '/images/works/1.JPG',
+            alt: 'Lavoro clinico professionale 1'
+        },
+        {
+            src: '/images/works/2.JPG',
+            alt: 'Lavoro clinico professionale 2'
+        },
+        {
+            src: '/images/works/3.JPG',
+            alt: 'Lavoro clinico professionale 3'
+        }
+    ];
+
     return (
         <section id='doctors' className='bg-white py-20'>
             <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
                 {/* Section Header */}
                 <div className='mb-16 text-center'>
                     <h2 className='mb-4 text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl'>
-                        Incontra i Nostri <span className='text-primary-600'>Dottori Esperti</span>
+                        <span className='text-primary-600'>Smile Provider</span>
                     </h2>
                     <p className='mx-auto max-w-2xl text-lg text-gray-600'>
                         Specialisti formati a livello internazionale dedicati a trasformare il tuo sorriso
@@ -132,6 +149,41 @@ const Doctors = () => {
                     ))}
                 </div>
 
+                {/* Our Works Section */}
+                <div className='mt-20'>
+                    <div className='mb-12 text-center'>
+                        <h3 className='mb-4 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl'>
+                            I Nostri <span className='text-primary-600'>Lavori</span>
+                        </h3>
+                        <p className='mx-auto max-w-2xl text-lg text-gray-600'>
+                            Esempi reali del nostro lavoro clinico di alta qualità
+                        </p>
+                    </div>
+
+                    <div className='grid gap-6 md:grid-cols-3'>
+                        {works.map((work, index) => (
+                            <div
+                                key={index}
+                                className='group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-2xl shadow-lg transition-all hover:shadow-2xl'
+                                onClick={() => {
+                                    setWorksLightboxIndex(index);
+                                    setWorksLightboxOpen(true);
+                                }}
+                            >
+                                <img
+                                    src={work.src}
+                                    alt={work.alt}
+                                    className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-110'
+                                />
+                                <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100' />
+                                <div className='absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
+                                    <p className='text-sm font-semibold'>Clicca per ingrandire</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
                 {/* Call to Action */}
                 <div className='mt-16 rounded-3xl bg-gradient-to-r from-primary-600 to-primary-500 p-8 text-center md:p-12'>
                     <h3 className='mb-4 text-2xl font-bold text-white sm:text-3xl'>
@@ -151,12 +203,20 @@ const Doctors = () => {
                     </button>
                 </div>
 
-                {/* Lightbox */}
+                {/* Lightbox for Doctors */}
                 <Lightbox
                     open={lightboxOpen}
                     close={() => setLightboxOpen(false)}
                     index={lightboxIndex}
                     slides={doctors.map((doctor) => ({ src: doctor.image, alt: doctor.name }))}
+                />
+
+                {/* Lightbox for Works */}
+                <Lightbox
+                    open={worksLightboxOpen}
+                    close={() => setWorksLightboxOpen(false)}
+                    index={worksLightboxIndex}
+                    slides={works.map((work) => ({ src: work.src, alt: work.alt }))}
                 />
             </div>
         </section>

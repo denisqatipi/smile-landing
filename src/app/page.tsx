@@ -6,6 +6,7 @@ import Doctors from '@/components/Doctors';
 import Treatments from '@/components/Treatments';
 import Journey from '@/components/Journey';
 import Gallery from '@/components/Gallery';
+import Accommodation from '@/components/Accommodation';
 import Destination from '@/components/Destination';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
@@ -29,6 +30,7 @@ const Page = () => {
                 <Treatments />
                 <Journey />
                 <Gallery />
+                <Accommodation />
                 <Destination />
                 <FAQ />
                 <Contact />

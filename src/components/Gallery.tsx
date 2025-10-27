@@ -209,36 +209,49 @@ const Gallery = () => {
                     <p className='text-lg text-gray-600'>Fidato da pazienti da tutta Europa</p>
                 </div>
 
-                <div className='grid gap-8 md:grid-cols-2'>
+                <div className='grid gap-6 md:grid-cols-2'>
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className='rounded-2xl border border-gray-200 bg-white p-8 shadow-md transition-all hover:border-primary-300 hover:shadow-lg'
+                            className='rounded-xl border border-gray-200 bg-white p-5 shadow-md transition-all hover:border-primary-300 hover:shadow-lg'
                         >
                             {/* Rating */}
-                            <div className='mb-4 flex items-center gap-1'>
+                            <div className='mb-3 flex items-center gap-1'>
                                 {[...Array(testimonial.rating)].map((_, i) => (
-                                    <Star key={i} className='h-5 w-5 fill-accent-500 text-accent-500' />
+                                    <Star key={i} className='h-4 w-4 fill-accent-500 text-accent-500' />
                                 ))}
                             </div>
 
                             {/* Testimonial Text */}
-                            <p className='mb-6 text-gray-700'>{testimonial.text}</p>
+                            <p className='mb-4 text-sm text-gray-700'>{testimonial.text}</p>
 
                             {/* Patient Info */}
-                            <div className='flex items-center gap-4 border-t border-gray-200 pt-6'>
-                                <div className='flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-lg font-bold text-primary-600'>
+                            <div className='flex items-center gap-3 border-t border-gray-200 pt-4'>
+                                <div className='flex h-10 w-10 items-center justify-center rounded-full bg-primary-100 text-sm font-bold text-primary-600'>
                                     {testimonial.countryCode}
                                 </div>
                                 <div>
-                                    <p className='font-semibold text-gray-900'>{testimonial.name}</p>
-                                    <p className='text-sm text-gray-600'>
+                                    <p className='text-sm font-semibold text-gray-900'>{testimonial.name}</p>
+                                    <p className='text-xs text-gray-600'>
                                         {testimonial.country} • {testimonial.treatment}
                                     </p>
                                 </div>
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* Link to All Google Reviews */}
+                <div className='mt-8 text-center'>
+                    <a
+                        href='https://share.google/HDOSpCxECQp446FLP'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-primary-600 shadow-md transition-all hover:bg-primary-50 hover:shadow-lg'
+                    >
+                        <Star className='h-5 w-5 fill-accent-500 text-accent-500' />
+                        Vedi Tutte le Recensioni Google
+                    </a>
                 </div>
             </div>
         </section>
